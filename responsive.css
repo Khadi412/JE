@@ -1,0 +1,59 @@
+@media (max-width: 1024px) {
+  .categories-grid, .why-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid, .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .intro-grid, .private-grid, .product-detail-grid, .quality-grid, .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .product-detail-grid.reverse { direction: ltr; }
+  .cta-box { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 80%; max-width: 320px;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    padding: 100px 40px 40px;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    z-index: 999;
+  }
+  .nav-links.active { right: 0; }
+  .nav-links a { color: var(--dark-text) !important; font-size: 1.1rem; }
+  .hamburger { display: flex; z-index: 1001; }
+  .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .nav-cta { display: none; }
+
+  .hero-title { font-size: 2.2rem; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .section { padding: 60px 0; }
+  .categories-grid, .why-grid, .services-grid, .stats-grid,
+  .process-steps, .mission-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .newsletter-form { flex-direction: column; width: 100%; }
+  .newsletter-form input { min-width: unset; width: 100%; }
+  .cta-box { padding: 40px 24px; }
+  .gallery-slide { height: 300px; }
+  .intro-image img, .product-detail-image img { height: 300px; }
+  .private-image img { height: 300px; }
+  .page-hero { padding: 140px 0 60px; }
+  .contact-form { padding: 28px; }
+  .whatsapp-float { bottom: 90px; right: 20px; width: 50px; height: 50px; }
+  .back-to-top { bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-content { padding: 100px 16px 60px; }
+  .hero-subtitle { font-size: 1rem; }
+  .section-title { font-size: 1.75rem; }
+  .stat-item .counter { font-size: 2.2rem; }
+  .country-tag { padding: 10px 20px; font-size: 0.85rem; }
+}
